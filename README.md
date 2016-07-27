@@ -36,3 +36,6 @@ This is my first UI Widget so I would love to get feedback and suggestions, plea
 1. Scroll Vertical, ability to scroll through measures (primary stays at top)
 2. Add a single dimension, horizontal swipe to qualify measures
 3. Add Link option
+
+# License
+Released under the MIT license.
