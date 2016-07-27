@@ -33,9 +33,7 @@ Configuration Options:
 This is my first UI Widget so I would love to get feedback and suggestions, pleae provide them in the comments below. In particular, I am intersted in cross-browser support issues, improvements in the CSS/LESS logic to be more optimal, and recommendations around how you would like the KPI to behave better in your responsive environment testing (mobile, tablet, desktop, orientation, sizing, etc...).
 
 # Remaining items, I would like to add for future versions...
-1. Scroll Vertical, ability to scroll through measures (primary stays at top)
-2. Add a single dimension, horizontal swipe to qualify measures
-3. Add Link option
+See Github Issues
 
 # License
 Released under the MIT license.
