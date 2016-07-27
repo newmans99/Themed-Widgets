@@ -25,8 +25,8 @@ Configuration Options:
 
 
 # Optional Sample/Test Application
-1. Download the sampleapp.zip
-2. In Qlik Sense 3.0 (or higher) QMC, import the sampleapp.zip into your applications
+1. Download the "Sample App.qvf"
+2. In Qlik Sense 3.0 (or higher) QMC, import the App into your applications
 3. Go to Qlik Sense Hub, in your "My Work" folder, open the app and view the sheet.
 
 # Please help...
