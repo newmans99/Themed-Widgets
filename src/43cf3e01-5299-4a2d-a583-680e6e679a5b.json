@@ -1,0 +1,129 @@
+{
+  "name": "Colorful KPI",
+  "description": "",
+  "author": "Steve Newman",
+  "library": "themedwidgets",
+  "meta": {
+    "type": "kpi"
+  },
+  "properties": {
+    "measures": {
+      "min": 0,
+      "max": 11
+    },
+    "dimensions": {
+      "max": 0,
+      "min": 0
+    },
+    "sections": [
+      {
+        "type": "header",
+        "order": 1,
+        "parent": "qw-pe-dropzone1-1",
+        "ref": "header2",
+        "label": "Settings"
+      }
+    ],
+    "settings": [
+      {
+        "component": "dropdown",
+        "type": "string",
+        "defaultValue": "default",
+        "options": [
+          {
+            "label": "Default",
+            "value": "default"
+          },
+          {
+            "label": "Grayscale",
+            "value": "grayscale"
+          },
+          {
+            "label": "Blue",
+            "value": "blue"
+          },
+          {
+            "label": "Bright Blue",
+            "value": "brightblue"
+          },
+          {
+            "label": "Green",
+            "value": "green"
+          },
+          {
+            "label": "Orange",
+            "value": "orange"
+          },
+          {
+            "label": "Red",
+            "value": "red"
+          },
+          {
+            "label": "Purple",
+            "value": "purple"
+          },
+          {
+            "label": "Warm Tones",
+            "value": "warmtones"
+          },
+          {
+            "label": "Cool Tones",
+            "value": "cooltones"
+          },
+          {
+            "label": "Mixed Tones",
+            "value": "mixedtones"
+          },
+          {
+            "label": "Primary Tones",
+            "value": "primarytones"
+          },
+          {
+            "label": "Blue Gray",
+            "value": "bluegray"
+          }
+        ],
+        "order": 1,
+        "parent": "header2",
+        "ref": "theme",
+        "label": "Theme"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#414141",
+        "order": 2,
+        "parent": "header2",
+        "ref": "primaryMeasureColor",
+        "label": "Primary Measure Color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#6E8BA8",
+        "order": 3,
+        "parent": "header2",
+        "ref": "measureColor",
+        "label": "Measure Color"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 0,
+        "parent": "header2",
+        "ref": "seperatePrimary",
+        "label": "Separate Primary Measure"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#6E8BA8",
+        "order": 4,
+        "parent": "header2",
+        "ref": "lableColor",
+        "label": "Label Color"
+      }
+    ]
+  }
+}

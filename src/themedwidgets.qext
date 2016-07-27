@@ -1,0 +1,8 @@
+{
+  "name": "Themed Widgets",
+  "description": "Widgets that are themed",
+  "type": "widget-library",
+  "widgets": [
+    "43cf3e01-5299-4a2d-a583-680e6e679a5b"
+  ]
+}

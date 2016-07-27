@@ -1,0 +1,184 @@
+<style>// Style settings start here
+@primaryMeasureColor: {{settings.primaryMeasureColor ? settings.primaryMeasureColor : "#414141"}};
+@secondaryMeasureColor: {{settings.measureColor ? settings.measureColor : "#6E8BA8"}};
+@labelTextColor: {{settings.labelColor ? settings.labelColor : "#6E8BA8"}};
+
+@baseTextSize: 1em;
+@defaultValueFont: "DinNext";
+@defaultLabelFont: "HelveticaNeueRoman";
+
+//Theme settings
+@defaultColor: 	#F2F2F2;
+
+@default:  		#ABCC00, #50A6BE, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@grayscale: 	#dcdcdc, #c7c7c7, #b8b8b8, #969696, #404040, #000000, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@blue:  		#365EBF, #2546AC, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@bluegray: 		#c0d0e4, #7090ab, #486c8f, #193048, #131f2b, #f3f8fe, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@brightblue: 	#0098cd, #007da9, #264a6d, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@green:  		#e1eed3, #92ce85, #56b349, #2ca01c, #356a2e, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@orange:  		#fbe0a3, #F2B835, #E77700, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@red: 			#ef797e, #D93b42, #a9282d, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@purple:  		#c72f79, #a32763, #871b45, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@warmtones: 	#C72F79, #E77700, #871B45, #F2B835, fadeout(#C72F79,30%), fadeout(#E77700,30%), fadeout(#871B45,30%), fadeout(#F2B835,30%), @defaultColor, @defaultColor, @defaultColor ;
+@cooltones: 	#0098CD, #0098CD, #264A6D, #264A6D, fadeout(#0098CD,30%), fadeout(#0098CD,30%), fadeout(#264A6D,30%), fadeout(#264A6D,30%), @defaultColor, @defaultColor, @defaultColor ;
+@primarytones: 	#d93b42, #F2B835, #56b349, #0098CD, fadeout(#d93b42,30%), fadeout(#F2B835,30%), fadeout(#56b349,30%), fadeout(#0098CD,30%), @defaultColor, @defaultColor, @defaultColor ;
+@mixedtones: 	#0098cd, #007da9, #c72f79, #e77700, #871b45, #8bd2eb, #264a6d, #f2b835, @defaultColor, @defaultColor ;
+
+// End style settings
+@theme: @{{settings.theme ? settings.theme : "default"}};
+
+
+.kpi-tile {
+    width:100%;
+    font-size: @baseTextSize;
+	display: table;	
+}
+
+
+.primaryKPI {
+	display: table-cell; 
+	width:50%;
+
+	padding-left: 5px;
+	
+	
+    .primaryValue {
+        font-family: @defaultValueFont, Arial, sans-serif;
+        letter-spacing: -0.05em;
+        font-size: 2rem;
+        color: @primaryMeasureColor;
+        text-transform: none;
+		
+        .transition-properties( font-size 0.3s linear;);
+    }
+    .primaryLabel {
+		margin-top: -2px;
+        white-space: nowrap;
+        text-transform: uppercase;
+		
+		font-family: @defaultLabelFont, Helvetica, Arial, sans-serif;
+        font-size: .9rem;
+		color: @labelTextColor;
+
+        .transition-properties( font-size 0.3s linear;);
+    }
+}
+
+.secondaryKPIs, .kpiList {
+    padding-top: 5px;
+    padding-left: 5px;
+	
+    .transition-properties( display 0.2s;);
+	
+    .secondaryValue, .listValue {
+        padding-left: 8px;
+
+		font-family: @defaultValueFont, Arial, sans-serif;
+        letter-spacing: -0.05em;
+        font-size: 1.5rem;
+        color:@secondaryMeasureColor;
+        text-transform: none;
+
+	.transition-properties( font-size 0.3s linear;);
+    }
+    .secondaryLabel, .listLabel {
+		margin-top: -2px;
+        white-space: nowrap;
+        text-transform: uppercase;
+
+        font-family: @defaultLabelFont, Helvetica, Arial, sans-serif;
+        font-size: .9rem;
+        color: @labelTextColor;
+		
+        .transition-properties( font-size 0.3s linear;);
+    }
+}
+
+.value1 {
+    border-left: 5px solid extract(@theme,1);
+}
+
+.value2 {
+    border-left: 5px solid extract(@theme,2);
+}
+
+.value3 {
+    border-left: 5px solid extract(@theme,3);
+}
+
+.value4 {
+    border-left: 5px solid extract(@theme,4);
+}
+
+.value5 {
+    border-left: 5px solid extract(@theme,5);
+}
+
+.value6 {
+    border-left: 5px solid extract(@theme,6);
+}
+
+.value7 {
+    border-left: 5px solid extract(@theme,7);
+}
+
+.value8 {
+    border-left: 5px solid extract(@theme,8);
+}
+
+.value9 {
+    border-left: 5px solid extract(@theme,9);
+}
+
+.value10 {
+    border-left: 5px solid extract(@theme,10);
+}
+
+//Responsive design
+.kpi-tile[max-width~="400px"] {
+    .secondaryValue {
+        font-size: 1.2rem;
+    }
+    .secondaryLabel {
+        font-size: .75rem;
+    }
+}
+
+.kpi-tile[max-width~="299px"] {
+    .secondaryKPIs {
+        display: none;
+    }
+}
+
+.kpi-tile[max-width~="200px"] {
+    .primaryValue, .listValue {
+        font-size: 1.2rem;
+    }
+    .primaryLabel, .listLabel {
+        font-size: .75rem;
+    }
+}
+
+.kpi-tile[max-width~="150px"] {
+    .primaryKPI, .kpiList {
+        display: none;
+    }
+}
+
+
+.transition-properties(...) {
+    -webkit-transition: @arguments;
+    -moz-transition: @arguments;
+    -o-transition: @arguments;
+    transition: @arguments;
+}</style>
+<div><div class="kpi-tile">
+  <div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryKPI' : 'secondaryKPIs') : 'kpiList'}}" ng-repeat="measure in data.rows[0].measures track by $index">
+	<div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryValue' : 'secondaryValue') : 'listValue'}} {{($index === 0 &amp;&amp; settings.seperatePrimary) ? '' : 'value'+($index + (settings.seperatePrimary ? 0 : 1))}}">
+	  {{measure.qText}}
+	  <div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryLabel' : 'secondaryLabel') : 'listLabel'}}">
+		{{data.headers[$index].qFallbackTitle}}
+	  </div>
+	</div>
+  </div>
+</div></div>
