@@ -1,8 +1,8 @@
 # Themed-Widgets
 Qlik Sense UI Widgets supporting themes, here are a few examples of what you can achieve with this UI Widget...
-> ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/example1.png)
+![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/example1.png)
 
-> ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/example2.png)
+![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/example2.png)
 
 # Implementation
 > ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/import_widget.png)
