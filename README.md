@@ -7,7 +7,7 @@ Qlik Sense UI Widgets supporting themes, here are a few examples of what you can
 # Implementation
 > ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/import_widget.png)
 
-1. Download the themedwidgets.zip [latest version](https://github.com/stefanwalther/Themed-Widgets/raw/master/themedwidget.zip) file (or the sample/test application below)
+1. Download the themedwidgets.zip [latest version](https://github.com/stefanwalther/Themed-Widgets/raw/master/themedwidgets.zip) file (or the sample/test application below)
 2. Open Dev-Hub from your Qlik Sense 3.0 (or higher) environment (Server or Desktop)
 3. Select "Import Widget library" from the "Create New" menu in the upper-right corner of the Dev-Hub main page.
 4. Select the zip file downloaded above. 
