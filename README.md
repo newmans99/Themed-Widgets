@@ -7,10 +7,11 @@ Qlik Sense UI Widgets supporting themes, here are a few examples of what you can
 # Implementation
 > ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/import_widget.png)
 
-1. Download the themedwidgets.zip [latest version](https://github.com/newmans99/Themed-Widgets/raw/master/themedwidgets.zip) file (or the sample/test application below)
+1. Download the themedwidgets.zip [latest version](https://github.com/newmans99/Themed-Widgets/raw/master/themedwidgets.zip) file
 2. Open Dev-Hub from your Qlik Sense 3.0 (or higher) environment (Server or Desktop)
 3. Select "Import Widget library" from the "Create New" menu in the upper-right corner of the Dev-Hub main page.
-4. Select the zip file downloaded above. 
+4. Select the zip file downloaded above.
+5. ALTERNATIVELY: Unzip the file into your Qlik Sense Extensions folder (server or desktop) in a directory called "themedwidgets". 
 
 # Use
 > ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/UI_add_widget.png)
@@ -36,7 +37,8 @@ These themes are from a customer specific implementation, however you can modify
   > ![](https://raw.githubusercontent.com/newmans99/Themed-Widgets/master/img/UI_themes.png)
 
 # Optional Sample/Test Application
-1. Download the "Sample App.qvf" [latest version](https://github.com/newmans99/Themed-Widgets/raw/master/Sample App.qvf)
+1. After installing the widget...
+2. Download the "Sample App.qvf" [latest version](https://github.com/newmans99/Themed-Widgets/raw/master/Sample App.qvf)
 2. In Qlik Sense 3.0 (or higher) QMC, import the App into your applications
 3. Go to Qlik Sense Hub, in your "My Work" folder, open the app and view the sheet.
 
