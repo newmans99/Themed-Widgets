@@ -1,5 +1,5 @@
 {
-  "name": "Colorful KPI",
+  "name": "Colorful KPI Dimensional",
   "description": "",
   "author": "Steve Newman",
   "library": "themedwidgets",
@@ -9,10 +9,10 @@
   "properties": {
     "measures": {
       "min": 0,
-      "max": 11
+      "max": 1
     },
     "dimensions": {
-      "max": 0,
+      "max": 1,
       "min": 0
     },
     "sections": [
@@ -83,7 +83,7 @@
             "value": "bluegray"
           }
         ],
-        "order": 2,
+        "order": 3,
         "parent": "header2",
         "ref": "theme",
         "label": "Theme"
@@ -92,10 +92,19 @@
         "type": "string",
         "expression": "optional",
         "defaultValue": "#6E8BA8",
-        "order": 3,
+        "order": 4,
         "parent": "header2",
         "ref": "measureColor",
         "label": "Measure Color"
+      },
+      {
+        "type": "string",
+        "expression": "optional",
+        "defaultValue": "#6E8BA8",
+        "order": 5,
+        "parent": "header2",
+        "ref": "lableColor",
+        "label": "Label Color"
       },
       {
         "type": "boolean",
@@ -103,27 +112,28 @@
         "defaultValue": true,
         "order": 0,
         "parent": "header2",
-        "ref": "seperatePrimary",
-        "label": "Separate Primary Measure"
+        "ref": "displayMeasureLabel",
+        "label": "Display Measure Label"
       },
       {
-        "type": "string",
+        "type": "boolean",
         "expression": "optional",
-        "defaultValue": "#6E8BA8",
-        "order": 4,
-        "parent": "header2",
-        "ref": "lableColor",
-        "label": "Label Color"
-      },
-      {
-        "type": "string",
-        "expression": "optional",
-        "defaultValue": "#414141",
+        "defaultValue": true,
         "order": 1,
         "parent": "header2",
-        "ref": "primaryMeasureColor",
-        "label": "Primary Measure Color"
+        "ref": "displayDimValue",
+        "label": "Display Dimension Value"
+      },
+      {
+        "type": "boolean",
+        "expression": "optional",
+        "defaultValue": true,
+        "order": 2,
+        "parent": "header2",
+        "ref": "displayDimLabel",
+        "label": "Display Dimension Label"
       }
-    ]
+    ],
+    "sorting": true
   }
 }

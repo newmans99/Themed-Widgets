@@ -1,15 +1,12 @@
 <style>// Style settings start here
-@primaryMeasureColor: {{settings.primaryMeasureColor ? settings.primaryMeasureColor : "#414141"}};
-@secondaryMeasureColor: {{settings.measureColor ? settings.measureColor : "#6E8BA8"}};
+@measureColor: {{settings.measureColor ? settings.measureColor : "#6E8BA8"}};
 @labelTextColor: {{settings.labelColor ? settings.labelColor : "#6E8BA8"}};
 
 @baseTextSize: 1em;
 @defaultValueFont: "DinNext";
 @defaultLabelFont: "HelveticaNeueRoman";
 
-//Import Theme settings (does not work yet, need correct path)
-//@import "themes.less";
-@defaultColor: 	{{settings.defaultColor ? settings.labelColor : "#F2F2F2"}};
+@defaultColor: 	{{settings.defaultColor ? settings.defaultColor : "#F2F2F2"}};
 
 @default:  		#ABCC00, #50A6BE, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
 @grayscale: 	#dcdcdc, #c7c7c7, #b8b8b8, #969696, #404040, #000000, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
@@ -33,56 +30,26 @@
     width:100%;
     font-size: @baseTextSize;
 	display: table;	
-}
 
 
-.primaryKPI {
-	display: table-cell; 
-	width:50%;
-
-	padding-left: 5px;
-	
-	
-    .primaryValue {
-        font-family: @defaultValueFont, Arial, sans-serif;
-        letter-spacing: -0.05em;
-        font-size: 2rem;
-        color: @primaryMeasureColor;
-        text-transform: none;
-		
-        .transition-properties( font-size 0.3s linear;);
-    }
-    .primaryLabel {
-		margin-top: -2px;
-        white-space: nowrap;
-        text-transform: uppercase;
-		
-		font-family: @defaultLabelFont, Helvetica, Arial, sans-serif;
-        font-size: .9rem;
-		color: @labelTextColor;
-
-        .transition-properties( font-size 0.3s linear;);
-    }
-}
-
-.secondaryKPIs, .kpiList {
+.kpiList {
     padding-top: 5px;
     padding-left: 5px;
 	
     .transition-properties( display 0.2s;);
 	
-    .secondaryValue, .listValue {
+    .listValue {
         padding-left: 8px;
 
 		font-family: @defaultValueFont, Arial, sans-serif;
         letter-spacing: -0.05em;
         font-size: 1.5rem;
-        color:@secondaryMeasureColor;
+        color:@measureColor;
         text-transform: none;
 
 	.transition-properties( font-size 0.3s linear;);
     }
-    .secondaryLabel, .listLabel {
+    .listLabel {
 		margin-top: -2px;
         white-space: nowrap;
         text-transform: uppercase;
@@ -93,6 +60,7 @@
 		
         .transition-properties( font-size 0.3s linear;);
     }
+}
 }
 
 .value1 {
@@ -136,32 +104,18 @@
 }
 
 //Responsive design
-.kpi-tile[max-width~="400px"] {
-    .secondaryValue {
-        font-size: 1.2rem;
-    }
-    .secondaryLabel {
-        font-size: .75rem;
-    }
-}
-
-.kpi-tile[max-width~="299px"] {
-    .secondaryKPIs {
-        display: none;
-    }
-}
 
 .kpi-tile[max-width~="200px"] {
-    .primaryValue, .listValue {
+    .listValue {
         font-size: 1.2rem;
     }
-    .primaryLabel, .listLabel {
+    .listLabel {
         font-size: .75rem;
     }
 }
 
 .kpi-tile[max-width~="150px"] {
-    .primaryKPI, .kpiList {
+    .kpiList {
         display: none;
     }
 }
@@ -174,12 +128,15 @@
     transition: @arguments;
 }</style>
 <div><div class="kpi-tile">
-  <div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryKPI' : 'secondaryKPIs') : 'kpiList'}}" ng-repeat="measure in data.rows[0].measures track by $index">
-	<div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryValue' : 'secondaryValue') : 'listValue'}} {{($index === 0 &amp;&amp; settings.seperatePrimary) ? '' : 'value'+($index + (settings.seperatePrimary ? 0 : 1))}}">
-	  {{measure.qText}}
-	  <div class="{{settings.seperatePrimary ? ($index === 0 ? 'primaryLabel' : 'secondaryLabel') : 'listLabel'}}">
-		{{data.headers[$index].qFallbackTitle}}
-	  </div>
+  <div class="kpiList" ng-repeat="row in data.rows track by $index">
+	<div class="{{'listValue value'+($index+1)}}">
+	  {{row.measures[0].qText}}
+		<div class="listLabel">
+		  {{(
+		  settings.displayMeasureLabel 	? (data.headers[1].qFallbackTitle + ((settings.displayDimLabel||settings.displayDimValue) 	? ' - ' : '')) 	: '') + (
+		  settings.displayDimLabel 		? (data.headers[0].qFallbackTitle + ((settings.displayDimValue) 							? ': ' 	: '')) 	: '') + (
+		  settings.displayDimValue 		? row.dimensions[0].qText 					: '')}}
+		</div>
 	</div>
   </div>
 </div></div>

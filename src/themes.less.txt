@@ -1,0 +1,16 @@
+//Theme settings
+@defaultColor: 	{{settings.defaultColor ? settings.labelColor : "#F2F2F2"}};
+
+@default:  		#ABCC00, #50A6BE, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@grayscale: 	#dcdcdc, #c7c7c7, #b8b8b8, #969696, #404040, #000000, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@blue:  		#365EBF, #2546AC, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@bluegray: 		#c0d0e4, #7090ab, #486c8f, #193048, #131f2b, #f3f8fe, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@brightblue: 	#0098cd, #007da9, #264a6d, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@green:  		#e1eed3, #92ce85, #56b349, #2ca01c, #356a2e, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@orange:  		#fbe0a3, #F2B835, #E77700, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@red: 			#ef797e, #D93b42, #a9282d, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@purple:  		#c72f79, #a32763, #871b45, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor, @defaultColor ;
+@warmtones: 	#C72F79, #E77700, #871B45, #F2B835, fadeout(#C72F79,30%), fadeout(#E77700,30%), fadeout(#871B45,30%), fadeout(#F2B835,30%), @defaultColor, @defaultColor, @defaultColor ;
+@cooltones: 	#0098CD, #0098CD, #264A6D, #264A6D, fadeout(#0098CD,30%), fadeout(#0098CD,30%), fadeout(#264A6D,30%), fadeout(#264A6D,30%), @defaultColor, @defaultColor, @defaultColor ;
+@primarytones: 	#d93b42, #F2B835, #56b349, #0098CD, fadeout(#d93b42,30%), fadeout(#F2B835,30%), fadeout(#56b349,30%), fadeout(#0098CD,30%), @defaultColor, @defaultColor, @defaultColor ;
+@mixedtones: 	#0098cd, #007da9, #c72f79, #e77700, #871b45, #8bd2eb, #264a6d, #f2b835, @defaultColor, @defaultColor ;
